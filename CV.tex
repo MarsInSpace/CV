@@ -1,0 +1,351 @@
+% Clean CV/Resume Template, by Bennet B <dev@bennet.cc>
+% CC0, Public-Domain
+% 
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this template and associated files (the "Template"), to deal
+% in the Template without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Template, and to permit persons to whom the Template is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Template.
+%
+% THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE TEMPLATE OR THE USE OR OTHER DEALINGS IN THE
+% TEMPLATE.
+%
+% based on Modern CV by Habib Semouma
+% https://www.overleaf.com/latex/templates/modern-cv-slash-resume-template/vjrqdkpjckwj
+%
+% 
+\documentclass[oneside]{article}
+
+\usepackage{wallpaper}
+\usepackage{geometry}
+\usepackage[
+    unicode=true,
+    bookmarks=true,
+    bookmarksnumbered=false,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    breaklinks=false,
+    pdfborder={0 0 0},
+    backref=false,
+    colorlinks=false
+    ]{hyperref}
+\usepackage{lastpage}
+\usepackage[none]{hyphenat}
+\usepackage{hyphsubst}
+\usepackage{tabularx}
+\usepackage{moresize}
+\usepackage[document]{ragged2e}
+% \usepackage{parskip}
+
+\usepackage[scaled]{helvet}
+\usepackage{fontawesome5}
+\usepackage[defaultfam,tabular,oldstyle]{montserrat}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\normalfont}{}{0pt}{}
+
+\renewcommand{\arraystretch}{1.4}
+
+\setlength\fboxrule{0pt}
+\setlength\fboxsep{12pt}
+% \setlength{\parskip}{.5\baselineskip plus 2pt}
+% \renewcommand{\baselinestretch}{1.1}
+
+\titlespacing{\section}{0pt}{1.5ex plus .1ex minus .2ex}{1pc}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+% Change PDF Meta Info here
+\hypersetup{
+    pdftitle={Mars Tonnelier - CV},
+    pdfauthor={Mars Tonnelier},
+    pdfsubject={CV}
+}
+
+% Paper size
+\geometry{
+    a4paper,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    nohead,
+    % includefoot,
+    nomarginpar
+}
+
+% Background Color of the Sidebar Column
+\definecolor{sidebg}{cmyk}{1, 0.02, 0, 0.56}
+% Background Color of the Main Column
+\definecolor{mainbg}{cmyk}{0, 0, 0.07, 0.04}
+
+% Text Color of the Main Column
+\definecolor{maintext}{cmyk}{1, 0.02, 0, 0.8}
+% Text Color of the Sidebar Column
+\definecolor{sidetext}{cmyk}{0, 0, 0.07, 0.04}
+
+\pagecolor{mainbg}
+
+\begin{document}
+\setlength{\topskip}{0pt}\setlength{\footskip}{0pt}%
+\fcolorbox{red}{sidebg}{%
+    \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{\dimexpr0.40\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{sidetext}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR NAME, PRONOUNS, OCCUPATION(s), AND HEADSHOT
+        {\bfseries\scshape\HUGE Mars} \\
+        {\bfseries\scshape\Huge Tonnelier} \qquad {they/them}
+        \vspace{.3cm} \\
+        Technical Artist, \\
+        Game Developer
+        \\
+        % \begin{center}
+        %     \begin{tikzpicture}
+        %     \clip (0,0) circle (3cm) node[anchor=center] {\includegraphics[width=6cm]{portait_template.jpg}}; 
+        %     \end{tikzpicture}
+        % \end{center}
+        \vspace{.3cm}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR PERSONAL INFROMATION
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Personal info}
+        \section*{\large Personal info}
+        \begin{tabularx}{\textwidth}{cY}
+            \faPhone{}      & +49 176 67604783 \\
+            \faEnvelope{}   & \href{mailto:mars.tonnelier@gmail.com}{mars.tonnelier@gmail.com} \\
+            \faMapPin{}     & Berlin, Germany \\
+        \end{tabularx}
+        \vspace{.3cm} \\
+        \rule{\linewidth}{0.4pt} \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR LINKS, YOU MAY ALSO ADD A PERSONAL WEBSITE OR PORTFOLIO
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Links}
+        \section*{\large Links}
+        \begin{tabular}{cl}
+        %    \faCode{}     & \href{https://example.com}{example.com}
+            \faGithub{}   & \href{https://github.com/MarsInSpace}{/MarsInSpace} \\
+            \faLinkedin{} & \href{https://www.linkedin.com/in/mars-tonnelier/}{/mars-tonnelier} \\
+        \end{tabular}
+        \vspace{10pt} \\
+        \rule{\linewidth}{0.4pt} \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR SKILLS
+        % Add/Remove as seen fit, Icons: https://packages.oth-regensburg.de/ctan/fonts/fontawesome5/doc/fontawesome5.pdf
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Skills}
+        \section*{\large Skills}
+        \begin{tabularx}{\textwidth}{cY}
+            \faCogs{}        & Unity Engine, Unreal Engine 4 \& 5 \\
+            \faGamepad{}     & 2D \& 3D Development, Development for VR \\
+            \faPalette{}     & Procreate, Adobe Photoshop, Autodesk Maya, Blender, Substance Painter \\
+            \faCode{}        & C\#, Javascript \\
+            \faToolbox{}     & \LaTeX, Photogrammetry \\
+        \end{tabularx}
+        \vspace{1pt} \\
+        \rule{\linewidth}{0.4pt}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % LANGUAGES
+        \phantomsection
+        \addcontentsline{toc}{section}{Languages}
+        \section*{\large Languages}
+        \begin{tabular}{cl}
+            \faLanguage{} & German (Native) \\
+            \faLanguage{} & French (Native) \\
+            \faLanguage{} & English (Fluent) \\
+            \faLanguage{} & Portuguese (Intermediate)
+        \end{tabular}
+        \vspace{.3cm}
+        \\
+        \rule{\linewidth}{0.4pt}
+        \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % GRADESCALE (if nesseary, e.g. if you apply abroad, where scales 
+        % are different. You should at least provide, what the best possible
+        % grade and what the worst possible grade is)
+        \vfill
+        {\tiny Grade scale: (1.0 - 1.5) very good $\approx$90\%-100\%, (1.6 - 2.5) good $\approx$75\%-89\%, (2.6 - 3.5) satisfactory $\approx$60\%-74\%, (3.6 - 4.0) sufficient $\approx$50\%-59\%, (5.0) failed $\approx$0\%-49\%}
+    \end{minipage}
+}
+\hfill
+\fcolorbox{red}{mainbg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.6\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{maintext}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % WORK EXPERIENCE
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Work Experience}
+        \section*{\scshape\Large Work Experience \rule{\linewidth}{0.4pt}}
+%
+        {\large \href{http://anotherworldvr.com/}{\textbf{AnotherWorld GmbH}}} \\ 
+        {{\fontseries{medium}\selectfont Full-time, Internship}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Oct 2022 \textendash{} Feb 2023} 
+        \begin{itemize}
+            \setlength{\itemsep}{-3pt}
+            \item Design, creation \& implementation of 3D assets for VR
+            \begin{itemize}
+                \item photogrammetry
+                \item retopology in Autodesk Maya
+                \item further optimisation in Autodesk Maya, Substance Painter and Unreal Engine
+            \end{itemize}
+            \item Creation of UVs, lightmaps and photorealistic textures as well as PBR materials
+            \item Prototyping 3D environments in Unreal Engine
+            \item Re-design of a 3D scene in Unreal Engine 4 \& re-imagining of the scene fitting for a specific time period
+            \item Design of UI and UX in adherence to a style sheet in Adobe Photoshop \& implementation in Unreal Engine 4
+        \end{itemize}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % EDUCATION
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Education}
+        \section*{\scshape\Large Education \rule{\linewidth}{0.4pt}}
+%
+        {\large \textbf{Game Design \textendash{} Hochschule für Technik und Wirtschaft}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Berlin, Germany \qquad Oct 2020 \textendash{} Apr 2024} \\
+        {Degree: Bachelor of Arts} \\[1ex]
+        {Grade: 1.5} \\[1ex]
+        {\footnotesize Secondary focus: Game Art, Game Programming} \\
+        {\footnotesize In-depth study: Technical Game Development} \\
+        {\footnotesize Thesis subject: Gamification in Education and Skill Development: Implementing Gaming Techniques for Effective Learning and Skill Acquisition in Personal Contexts} \\[2ex]
+
+        {\large \textbf{Year abroad \textendash{} Havelock North High School}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Havelock North, New Zealand \qquad Jun 2016 \textendash{} Apr 2017} \\
+        {\footnotesize Focus subjects: Japanese, Art, Engineering} \\[2ex]
+
+        {\large \textbf{School Education, Einstein-Gymnasium Kehl}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Kehl, Germany \qquad Sep 2011 \textendash{} Jul 2019} \\
+        {Degree: Abitur\\ (General higher education entrance qualification)} \\[1ex]
+        {Grade: 1.5} \\[1ex]
+        {\footnotesize Elective Courses: German, Math, French, English, Art} \\
+        % \\
+        \vfill%
+        {\hfill\small\fontseries{extralight}\selectfont Page \thepage of 2\hfill}
+    \end{minipage}
+}%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fcolorbox{red}{mainbg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.6\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{maintext}
+        % \vspace{.6cm}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % PROJECTS
+        \phantomsection
+        \addcontentsline{toc}{section}{Projects}
+        \section*{\scshape\Large Projects \rule{\linewidth}{0.4pt}}
+        \begin{justify}
+        \setlength{\parindent}{0pt}
+        {\large \href{https://www.vortexcinema.com/}{\textbf{The Vortex Cinema}}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize AnotherWorld VR \qquad 2022 \textendash{} 2023} \\
+        A time-travelling, genre bending VR shooter where you enter the world of black and white movies, stepping into the shoes of a hard-boiled detective at the center of a film noir murder mystery. \\[1ex]
+        Photogrammetry, Unreal Engine, Autodesk Maya, Substance Painter \\
+
+        {\large \href{https://district.berlin/}{\textbf{The District VR}}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize AnotherWorld VR \qquad 2022 \textendash{} 2023} \\
+        A VR experience that makes Berlin's music and nightlife come alive. Socializing, clubbing and DJing in an immersive multiplayer world.\\[1ex]
+        UI Design, UX, Unreal Engine, VR \\
+
+        {\large \textbf{Project Poltergeist}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Personal \qquad 2022 and ongoing} \\
+        A humorous 3D game about a ghost who found some of their belongings in a local museum. Outraged, the goal is to haunt the museum and scare off the visitors, ultimately forcing it to close down. \\[1ex]
+        3D Development, Unity Engine, C\# Programming \\
+
+        {\large \textbf{Audiality}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize HTW Berlin \qquad 2022} \\
+        An audio-only VR experience that immerses the player in a three dimensional world full of different, interactive sounds. The player has to rely on their sense of hearing to discover and manipulate the soundscape. \\[1ex]
+        VR Development, Unity Engine, Sound Design \\
+
+        {\large \textbf{Rebellations}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize HTW Berlin \qquad 2022} \\
+        An experimental board game that addresses the impact that colonialism still has today. It is a cooperative game and relies on good communication and cooperation among the players. \\[1ex]
+        Boardgame Design, System Design, Playtest Organisation \& Evaluation \\
+
+        {\large \textbf{Slingshot}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize HTW Berlin \qquad 2021} \\
+        A 3D-sidescroller arcade highscore game. With focus on a fast pace, high momentum and an optimised game feel for maximum satisfaction. \\[1ex]
+        3D Development, Unity Engine, C\# Programming \\
+        \end{justify}
+        \vfill%
+        {\hfill\small\fontseries{extralight}\selectfont Page \thepage of 2\hfill}
+    \end{minipage}
+}
+\hfill%
+\fcolorbox{red}{sidebg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.4\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{sidetext}
+        % \vspace{.5cm}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % YOUR NAME AND PREFERED PRONOUS AGAIN AS HEADER
+        {\bfseries\scshape\HUGE Mars} \\
+        {\bfseries\scshape\Huge Tonnelier} \qquad {they/them}
+        \vspace{.3cm} \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % LANGUAGES
+        % \phantomsection
+        % \addcontentsline{toc}{section}{Languages}
+        % \section*{\large Languages}
+        % \begin{tabular}{cl}
+        %     \faLanguage{} & German (Mothertongue) \\
+        %     \faLanguage{} & French (Mothertongue) \\
+        %     \faLanguage{} & English (Fluent) \\
+        %     \faLanguage{} & Portuguese (Intermediate)
+        % \end{tabular}
+        % \vspace{.3cm}
+        % \\
+        % \rule{\linewidth}{0.4pt}
+        % \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % CERTIFICATES AND AWARDS RECEIVED
+        % \phantomsection
+        % \addcontentsline{toc}{section}{Certificates and Prizes}
+        % \section*{\large Certificates and Prizes}
+        % \begin{tabularx}{\textwidth}{cY}
+        %     2010 & Etiam tempor orci eu \\
+        %     2010 & Quam nulla porttitor massa \textemdash{} 3\textsuperscript{rd} place \\
+        %     2011 & Quis imperdiet massa tincidunt \textemdash{} 3\textsuperscript{rd} place \\
+        %     2016 & Vestibulum sed arcu non odio euismod \\
+        %     2016 & Non enim praesent elementum facilisis \\
+        %     2016 & Blandit libero volutpat sed cras \\
+        %     2016 & Eget dolor morbi non arcu \\
+        % \end{tabularx}
+        % \vspace{.3cm}
+        % \\
+        % \rule{\linewidth}{0.4pt}
+        % \\
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % HOBBIES
+        % Change Icons here https://packages.oth-regensburg.de/ctan/fonts/fontawesome5/doc/fontawesome5.pdf
+        \phantomsection
+        \addcontentsline{toc}{section}{Hobbies}
+        \section*{\large Hobbies}
+        \begin{tabularx}{\textwidth}{cY}
+            \faPaintBrush{} & Painting \& Illustration \\
+            \faPencilRuler{} & Crafting \& Tailoring \\
+            \faStar{} & TTRPG, LARPing \& LARP Orga \\
+            \faGamepad{} & Gaming \\
+            \faBook{} & Reading \\
+            \faGuitar{} & Playing Piano \& Guitar \\
+            \faRunning{} & Martial Arts \& Bouldering \\
+        \end{tabularx}
+        \vspace{.3cm}
+        \\
+        \rule{\linewidth}{0.4pt}
+    \end{minipage}%
+}%
+\end{document}
